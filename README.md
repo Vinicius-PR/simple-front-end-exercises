@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simple Frond End Exercises
 
-## Getting Started
+## Counter page
 
-First, run the development server:
+The counter is a famous one. I used the useState hook from react to keep track of the counter. The app will display the result when counter change. There are 3 buttons. One to increase, other to decrease and last one to reset. In addition, I added some animation using css and js to change size and color when chaning the value of the counter.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## User page
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This one use the function getStaticProps to fetch the data from a fake api from the https://jsonplaceholder.typicode.com/. The page will receive the data in the json format and will display the list of users from the api. The page is full responsive. Showing the necessery data to fit the screen.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Also there is a option to click in the name of the fake user and see more information about them. It is done using the dynamic routes. The page [id].tsx will take care of it. Will display the information of the clicked user. Inside this file you can see the implematation of two needed functions to dynamic routes work: getStaticPaths and getStaticProps.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Post page
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This page is similar to the user. Its data also comes from a fake api from the https://jsonplaceholder.typicode.com/. Clicking in any post will display more information about it using Dynamic Routes. In addtion, the page of posts have pagination. 
 
-## Learn More
+To this especific pagination, I fetched all the data and saved in an array. Doing this way, I can slice it and display the right posts acording which page is. There is a variable called "numberPostPerPage" that will control how many page will have, because the variable "numberPage" depends on its value. Also will set how many post will display per page. 
 
-To learn more about Next.js, take a look at the following resources:
+In others api the solution would be diferent, because some can return the number of total data that have but it does not occurs with the fake api used. That is why I ended up with this solution.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# To use this project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Clone this project to you local files typing the command (go to the location where you wanna save it):
+> git clone https://github.com/Vinicius-PR/simple-front-end-exercises
 
-## Deploy on Vercel
+Move to the file project:
+> cd simple-front-end-exercises
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open with your code editor. If you are using Visual Code, run:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> code .
+
+Install the dependencies:
+> yarn
+
+Start the aplication and enjoy: \o/
+> yarn dev
+> 
