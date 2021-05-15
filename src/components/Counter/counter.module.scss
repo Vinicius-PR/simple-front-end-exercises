@@ -1,0 +1,79 @@
+.counterContainer {
+  border: 1px solid purple;
+  max-width: 15rem;
+  padding: 0 1rem;
+  margin: 2rem auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div {
+    p {
+      font-size: 2rem;
+    }
+    text-align: center;
+    width: 4.5rem;
+    background-color: lightgray;
+    padding: 0.8rem 0;
+    margin: 1rem 0;
+  }
+
+  button {
+    text-transform: uppercase;
+    padding: 0 1rem;
+    height: 2rem;
+    border: none;
+    margin-bottom: 1rem;
+
+    &[name="increment"] {
+      background-color: lightgreen;
+    }
+
+    &[name="decrement"] {
+      background-color: lightcoral;
+    }
+
+    &[name="reset"] {
+      background-color: lightskyblue;
+    }
+  }
+}
+
+.increment {
+  animation: increment 0.1s ease-in-out;
+}
+
+.decrement {
+  animation: decrement 0.1s ease-in-out;
+}
+
+@keyframes increment {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    color: green;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes decrement {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+    color: red;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,39 @@
+.postContainer {
+  table {
+    width: 40vw;
+    margin: 0 auto;
+  }
+
+  table,
+  tr,
+  td,
+  th {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  td {
+    padding-left: 1rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 95%;
+    display: block;
+    border: none;
+  }
+
+  td,
+  tr {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .postsBtn {
+    width: 50%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

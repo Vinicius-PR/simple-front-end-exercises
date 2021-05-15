@@ -1,0 +1,70 @@
+@import "../../utilities/named_variables.scss";
+
+.headerContainer {
+  background-color: rgb(243, 243, 239);
+  box-shadow: 0 1px 3px rgba(15, 15, 15, 0.15);
+  height: 5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-left: 1rem;
+    width: 60px;
+    height: 60px;
+  }
+  ul {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+
+    height: inherit;
+    width: 70%;
+
+    li {
+      padding: 0.7rem;
+      border-radius: 1rem;
+      transition: 0.2s ease-in-out;
+      font-size: 1.3rem;
+
+      &:hover {
+        color: white;
+        background-color: rgb(76, 44, 80);
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    & {
+      margin: 0;
+      // width: 60vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: none;
+      height: 100vh;
+      transition: all 0.2s ease-in-out;
+
+      button {
+        align-self: flex-start;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        position: fixed;
+      }
+
+      ul {
+        li {
+          font-size: 1.5rem;
+        }
+        width: 50vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+        border: 1px saddlebrown solid;
+      }
+    }
+  }
+}
